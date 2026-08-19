@@ -96,12 +96,21 @@ button {
   transform: translate(-50%, -50%);
   width: min(64vw, 860px);
   min-height: clamp(150px, 26vh, 300px);
+  border-color: #172554;
+  background: #2563eb;
+  color: #ffffff;
   font-size: clamp(58px, 10vw, 142px);
+  box-shadow: 0 16px 44px rgba(37, 99, 235, 0.28);
 }
 
 .landing__button:hover,
 .landing__button:focus-visible {
   transform: translate(-50%, -50%) scale(1.025);
+}
+
+.landing__button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 24px 64px rgba(29, 78, 216, 0.36);
 }
 
 .landing__create {
