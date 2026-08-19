@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ActionButton from "../components/ActionButton";
 
 export default function CreatePage() {
   return (
@@ -7,9 +8,9 @@ export default function CreatePage() {
         Elon Money
       </Link>
 
-      <button className="create-page__button" type="button">
+      <ActionButton className="create-page__button">
         Create
-      </button>
+      </ActionButton>
     </main>
   );
 }

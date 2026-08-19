@@ -46,65 +46,68 @@ button {
   white-space: nowrap;
 }
 
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 2px solid #7d001f;
+  border-radius: 999px;
+  background: #ff2f64;
+  color: #190006;
+  font-weight: 600;
+  line-height: 0.9;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 16px 44px rgba(255, 47, 100, 0.24);
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.action-button--hero {
+  width: min(76vw, 980px);
+  min-height: clamp(180px, 32vh, 360px);
+  padding: 32px;
+  font-size: clamp(64px, 12vw, 172px);
+  letter-spacing: -0.06em;
+}
+
+.action-button--compact {
+  min-height: 52px;
+  padding-inline: 26px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.action-button:hover {
+  transform: scale(1.025);
+  background: #ff174f;
+  box-shadow: 0 24px 64px rgba(255, 23, 79, 0.34);
+}
+
+.action-button:focus-visible {
+  outline: 3px solid #6a8dff;
+  outline-offset: 5px;
+}
+
 .landing__button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 52.587%;
-  height: 17.117%;
-  min-height: 72px;
-  padding: 0 24px;
-  border: 1px solid #000000;
-  border-radius: 0;
-  background: #31c55b;
-  color: #000000;
-  font-size: 54.727px;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-  transition: background-color 160ms ease, color 160ms ease;
+  width: min(64vw, 860px);
+  min-height: clamp(150px, 26vh, 300px);
+  font-size: clamp(58px, 10vw, 142px);
 }
 
 .landing__button:hover,
 .landing__button:focus-visible {
-  background: #157a34;
-  color: #ffffff;
+  transform: translate(-50%, -50%) scale(1.025);
 }
 
 .landing__create {
   position: absolute;
   top: 28px;
   right: 38px;
-  min-height: 48px;
-  padding: 0 24px;
-  border: 1px solid #000000;
-  border-radius: 0;
-  background: #ffffff;
-  color: #000000;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
-}
-
-.landing__create:hover,
-.landing__create:focus-visible {
-  background: #31c55b;
-}
-
-.landing__create:focus-visible {
-  outline: 3px solid #6a8dff;
-  outline-offset: 3px;
-}
-
-.landing__button:focus-visible {
-  outline: 3px solid #6a8dff;
-  outline-offset: 3px;
 }
 
 .create-page {
@@ -135,32 +138,7 @@ button {
 }
 
 .create-page__button {
-  width: min(76vw, 980px);
-  min-height: clamp(180px, 32vh, 360px);
-  padding: 32px;
-  border: 2px solid #7d001f;
-  border-radius: 999px;
-  background: #ff2f64;
-  color: #190006;
-  font-size: clamp(64px, 12vw, 172px);
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-  cursor: pointer;
   box-shadow: 0 22px 60px rgba(255, 47, 100, 0.28);
-  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
-}
-
-.create-page__button:hover {
-  transform: scale(1.025);
-  background: #ff174f;
-  box-shadow: 0 28px 70px rgba(255, 23, 79, 0.36);
-}
-
-.create-page__button:focus-visible,
-.create-page__back:focus-visible {
-  outline: 3px solid #6a8dff;
-  outline-offset: 5px;
 }
 
 @media (max-width: 700px) {
@@ -172,14 +150,15 @@ button {
 
   .landing__button {
     width: calc(100% - 48px);
-    font-size: clamp(36px, 11vw, 54.727px);
+    min-height: 190px;
+    font-size: clamp(52px, 17vw, 92px);
   }
 
   .landing__create {
     top: 86px;
     right: 24px;
-    min-height: 42px;
-    padding: 0 16px;
+    min-height: 46px;
+    padding-inline: 18px;
     font-size: 15px;
   }
 
@@ -195,15 +174,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .landing__button {
-    transition: none;
-  }
-
-  .landing__create {
-    transition: none;
-  }
-
-  .create-page__button {
+  .action-button {
     transition: none;
   }
 }

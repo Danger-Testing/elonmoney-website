@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ActionButton from "./components/ActionButton";
 
 export default function Home() {
   return (
@@ -7,13 +7,13 @@ export default function Home() {
         Elon Money
       </h1>
 
-      <Link className="landing__create" href="/create">
+      <ActionButton className="landing__create" href="/create" size="compact">
         Create your own
-      </Link>
+      </ActionButton>
 
-      <button className="landing__button" type="button" data-node-id="43:19">
+      <ActionButton className="landing__button">
         <span data-node-id="43:20">Net worth</span>
-      </button>
+      </ActionButton>
     </main>
   );
 }
