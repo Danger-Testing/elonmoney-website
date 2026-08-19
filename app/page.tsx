@@ -5,6 +5,10 @@ export default function Home() {
         Elon Money
       </h1>
 
+      <button className="landing__create" type="button">
+        Create your own
+      </button>
+
       <button className="landing__button" type="button" data-node-id="43:19">
         <span data-node-id="43:20">Net worth</span>
       </button>

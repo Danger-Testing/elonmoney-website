@@ -57,7 +57,7 @@ button {
   padding: 0 24px;
   border: 1px solid #000000;
   border-radius: 0;
-  background: #ffffff;
+  background: #31c55b;
   color: #000000;
   font-size: 54.727px;
   font-weight: 400;
@@ -68,8 +68,35 @@ button {
 
 .landing__button:hover,
 .landing__button:focus-visible {
-  background: #000000;
+  background: #157a34;
   color: #ffffff;
+}
+
+.landing__create {
+  position: absolute;
+  top: 28px;
+  right: 38px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid #000000;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.landing__create:hover,
+.landing__create:focus-visible {
+  background: #31c55b;
+}
+
+.landing__create:focus-visible {
+  outline: 3px solid #6a8dff;
+  outline-offset: 3px;
 }
 
 .landing__button:focus-visible {
@@ -88,10 +115,22 @@ button {
     width: calc(100% - 48px);
     font-size: clamp(36px, 11vw, 54.727px);
   }
+
+  .landing__create {
+    top: 86px;
+    right: 24px;
+    min-height: 42px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .landing__button {
+    transition: none;
+  }
+
+  .landing__create {
     transition: none;
   }
 }
