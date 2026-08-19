@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="landing" data-node-id="43:15">
@@ -5,9 +7,9 @@ export default function Home() {
         Elon Money
       </h1>
 
-      <button className="landing__create" type="button">
+      <Link className="landing__create" href="/create">
         Create your own
-      </button>
+      </Link>
 
       <button className="landing__button" type="button" data-node-id="43:19">
         <span data-node-id="43:20">Net worth</span>
